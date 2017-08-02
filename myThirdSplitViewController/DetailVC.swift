@@ -10,11 +10,18 @@ import UIKit
 
 class DetailVC: UIViewController {
 
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myImages: UIImageView!
+    var index: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if index == nil && !daten.logos.isEmpty {
+            index = 0
+        }
+        if index != nil && index < daten.logos.count {
+            myImages.image = UIImage(named: daten.logos[index])
+            myLabel.text = daten.teams[index]
+        }
+   
     }
-
-
 }

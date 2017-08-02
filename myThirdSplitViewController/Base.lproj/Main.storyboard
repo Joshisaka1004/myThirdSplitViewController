@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GeorgiaItalic.ttf">
+            <string>Georgia-Italic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--DetailVC-->
         <scene sceneID="1cB-Hg-SyM">
@@ -16,9 +21,34 @@
                     <view key="view" contentMode="scaleToFill" id="iWq-YT-zOn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SAK-Ee-bk7">
+                                <rect key="frame" x="6" y="114" width="363" height="473"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????????????" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-wC-pC0">
+                                <rect key="frame" x="115.5" y="615" width="144" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SAK-Ee-bk7" firstAttribute="leading" secondItem="khZ-8i-7TP" secondAttribute="leading" constant="6" id="GeP-BJ-jRK"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZGl-wC-pC0" secondAttribute="trailing" constant="20" symbolic="YES" id="gAO-ig-Bj8"/>
+                            <constraint firstItem="khZ-8i-7TP" firstAttribute="bottom" secondItem="SAK-Ee-bk7" secondAttribute="bottom" constant="80" id="ldZ-q1-jKw"/>
+                            <constraint firstItem="ZGl-wC-pC0" firstAttribute="top" secondItem="SAK-Ee-bk7" secondAttribute="bottom" constant="28" id="nZ9-FM-6Yr"/>
+                            <constraint firstItem="khZ-8i-7TP" firstAttribute="trailing" secondItem="SAK-Ee-bk7" secondAttribute="trailing" constant="6" id="pxB-Qd-diT"/>
+                            <constraint firstItem="ZGl-wC-pC0" firstAttribute="centerX" secondItem="iWq-YT-zOn" secondAttribute="centerX" id="rdy-YJ-hjr"/>
+                            <constraint firstItem="SAK-Ee-bk7" firstAttribute="centerX" secondItem="iWq-YT-zOn" secondAttribute="centerX" id="rzC-AA-DLZ"/>
+                            <constraint firstItem="SAK-Ee-bk7" firstAttribute="top" secondItem="khZ-8i-7TP" secondAttribute="top" constant="50" id="uTS-WH-KvL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="khZ-8i-7TP"/>
                     </view>
+                    <connections>
+                        <outlet property="myImages" destination="SAK-Ee-bk7" id="5yC-Yc-zfR"/>
+                        <outlet property="myLabel" destination="ZGl-wC-pC0" id="p8b-sw-kNg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0R-Un-7yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +80,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lFu-VF-SR3" kind="showDetail" id="7ar-X5-iXq"/>
+                                    <segue destination="lFu-VF-SR3" kind="showDetail" identifier="showDetail" id="7ar-X5-iXq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWP-HW-7Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="-762"/>
+            <point key="canvasLocation" x="676" y="-762"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="apl-DT-snO">
