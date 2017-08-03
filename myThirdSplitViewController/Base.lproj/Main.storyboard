@@ -9,11 +9,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ArialHB.ttc">
+            <string>ArialHebrew-Bold</string>
+        </array>
         <array key="GeorgiaItalic.ttf">
             <string>Georgia-Italic</string>
         </array>
     </customFonts>
     <scenes>
+        <!--Starting DetailVC-->
+        <scene sceneID="T0D-43-Jwi">
+            <objects>
+                <viewController id="Pk4-zv-yHx" customClass="startingDetailVC" customModule="myThirdSplitViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WSV-Yl-UA8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your favourite team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSv-CY-lxD">
+                                <rect key="frame" x="38" y="321" width="300.5" height="26"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.76862745098039209" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RSv-CY-lxD" firstAttribute="centerY" secondItem="WSV-Yl-UA8" secondAttribute="centerY" id="C38-HA-Eyt"/>
+                            <constraint firstItem="RSv-CY-lxD" firstAttribute="centerX" secondItem="WSV-Yl-UA8" secondAttribute="centerX" id="YZO-bL-qMO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YSl-vU-M2s"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RCj-3O-tQc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjj-ME-gj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.40000000000001" y="58.920539730134934"/>
+        </scene>
         <!--DetailVC-->
         <scene sceneID="1cB-Hg-SyM">
             <objects>
@@ -23,10 +54,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SAK-Ee-bk7">
-                                <rect key="frame" x="6" y="114" width="363" height="473"/>
+                                <rect key="frame" x="6" y="114" width="363" height="429"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????????????" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-wC-pC0">
-                                <rect key="frame" x="115.5" y="615" width="144" height="28.5"/>
+                                <rect key="frame" x="115.5" y="571" width="144" height="28.5"/>
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,6 +76,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="khZ-8i-7TP"/>
                     </view>
+                    <navigationItem key="navigationItem" id="giP-vo-N2D"/>
                     <connections>
                         <outlet property="myImages" destination="SAK-Ee-bk7" id="5yC-Yc-zfR"/>
                         <outlet property="myLabel" destination="ZGl-wC-pC0" id="p8b-sw-kNg"/>
@@ -52,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0R-Un-7yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="-6"/>
+            <point key="canvasLocation" x="1959.2" y="61.619190404797607"/>
         </scene>
         <!--myBooks-->
         <scene sceneID="Xbu-bD-FZ4">
@@ -80,7 +112,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lFu-VF-SR3" kind="showDetail" identifier="showDetail" id="7ar-X5-iXq"/>
+                                    <segue destination="Q8T-pm-zhX" kind="showDetail" identifier="showDetail" id="7ar-X5-iXq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -117,15 +149,48 @@
                 <splitViewController id="Bj3-WQ-zXH" sceneMemberID="viewController">
                     <connections>
                         <segue destination="2hG-Gw-zIl" kind="relationship" relationship="masterViewController" id="s6d-y4-7Ms"/>
-                        <segue destination="lFu-VF-SR3" kind="relationship" relationship="detailViewController" id="V67-g2-JlV"/>
+                        <segue destination="xa6-Dy-XG5" kind="relationship" relationship="detailViewController" id="KeD-7B-YXe"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAT-YP-JGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1104" y="-434"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nRn-bS-Tfb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xa6-Dy-XG5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1UW-5e-aGe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pk4-zv-yHx" kind="relationship" relationship="rootViewController" id="L6c-VT-Ls5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziB-N1-X6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="62"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Usr-cQ-rhm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8T-pm-zhX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NG8-MP-EW3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lFu-VF-SR3" kind="relationship" relationship="rootViewController" id="8lY-LA-goZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfe-Q8-T6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="59"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="7ar-X5-iXq"/>
-    </inferredMetricsTieBreakers>
 </document>

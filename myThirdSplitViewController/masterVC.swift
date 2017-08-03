@@ -12,7 +12,7 @@ class masterVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        splitViewController?.preferredDisplayMode = .primaryOverlay
+        splitViewController?.preferredDisplayMode = .allVisible
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return daten.teams.count
@@ -32,8 +32,8 @@ class masterVC: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myMode = splitViewController?.displayMode
-        if myMode == .allVisible {
-            splitViewController?.preferredDisplayMode = .primaryHidden
+        if myMode == .primaryOverlay {
+            splitViewController?.preferredDisplayMode = .allVisible
         }
     }
 }
