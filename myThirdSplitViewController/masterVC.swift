@@ -24,9 +24,11 @@ class masterVC: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            let detailVC = segue.destination as! DetailVC
+            let tempDetailVC = segue.destination as! UINavigationController
+            let detailVC = tempDetailVC.topViewController as! DetailVC
             if let myPath = tableView.indexPathForSelectedRow {
                 detailVC.index = myPath.row
+                splitViewController?.preferredDisplayMode = .primaryHidden
             }
         }
     }

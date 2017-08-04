@@ -15,13 +15,19 @@ class DetailVC: UIViewController {
     var index: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if index == nil && !daten.logos.isEmpty {
-            index = 0
-        }
+        let myButton = splitViewController?.displayModeButtonItem
+        navigationItem.leftBarButtonItem = myButton
+        navigationItem.leftItemsSupplementBackButton = true
         if index != nil && index < daten.logos.count {
             myImages.image = UIImage(named: daten.logos[index])
             myLabel.text = daten.teams[index]
         }
    
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBigger" {
+            let controller = segue.destination as! showBiggerVC
+            controller.index = index
+        }
     }
 }

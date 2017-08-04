@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B34D0B71F33C155003046F1 /* showBiggerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34D0B61F33C155003046F1 /* showBiggerVC.swift */; };
 		3B7E60511F31DC5C0056B1E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E60501F31DC5C0056B1E6 /* AppDelegate.swift */; };
 		3B7E60531F31DC5C0056B1E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E60521F31DC5C0056B1E6 /* ViewController.swift */; };
 		3B7E60561F31DC5C0056B1E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7E60541F31DC5C0056B1E6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B34D0B61F33C155003046F1 /* showBiggerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showBiggerVC.swift; sourceTree = "<group>"; };
 		3B7E604D1F31DC5C0056B1E6 /* myThirdSplitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myThirdSplitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7E60501F31DC5C0056B1E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7E60521F31DC5C0056B1E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3B7E60501F31DC5C0056B1E6 /* AppDelegate.swift */,
 				3B7E60521F31DC5C0056B1E6 /* ViewController.swift */,
 				3B7E60541F31DC5C0056B1E6 /* Main.storyboard */,
+				3B34D0B61F33C155003046F1 /* showBiggerVC.swift */,
 				3BFD9B8C1F3276BF00E4D056 /* startingDetailVC.swift */,
 				3BCDA61B1F3232B1004DC1F4 /* myData.swift */,
 				3B7E60621F31E0E80056B1E6 /* masterVC.swift */,
@@ -149,6 +152,7 @@
 			files = (
 				3B7E60531F31DC5C0056B1E6 /* ViewController.swift in Sources */,
 				3B7E60651F31E1080056B1E6 /* DetailVC.swift in Sources */,
+				3B34D0B71F33C155003046F1 /* showBiggerVC.swift in Sources */,
 				3B7E60511F31DC5C0056B1E6 /* AppDelegate.swift in Sources */,
 				3B7E60631F31E0E80056B1E6 /* masterVC.swift in Sources */,
 				3BCDA61C1F3232B1004DC1F4 /* myData.swift in Sources */,

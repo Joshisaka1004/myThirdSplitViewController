@@ -12,8 +12,8 @@ class startingDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let myButton = splitViewController?.displayModeButtonItem
+        navigationItem.leftBarButtonItem = myButton
+        navigationItem.leftItemsSupplementBackButton = true
     }
-
-
 }
